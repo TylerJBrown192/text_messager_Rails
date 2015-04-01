@@ -1,14 +1,4 @@
-<h4>Create new message</h4>
-
-<%= form_for @message do |f| %>
-  <%= f.label :from %>
-  <%= f.text_field :from %>
-  <%= f.label :to %>
-  <%= f.text_field :to %>
-  <%= f.label :body %>
-  <%= f.text_field :body %>
-  <%= f.submit %>
-<% end %>
+<%= link_to "New Text Message", new_message_path %>
 
 <h4>Messages</h4>
 

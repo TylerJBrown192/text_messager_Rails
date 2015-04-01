@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20150401044058) do
   enable_extension "plpgsql"
 
   create_table "messages", force: :cascade do |t|
-    t.string   "body"
+    t.text     "body"
     t.string   "to"
     t.string   "from"
     t.datetime "created_at"

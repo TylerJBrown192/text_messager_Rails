@@ -1,12 +1,17 @@
 class MessagesController < ApplicationController
+
   def index
-    @message = Message.new
     @messages = Message.all
+  end
+
+  def new
+    @message = Message.new
   end
 
   def create
     @message = Message.new(message_params)
     if @message.save
+      flash[:notice] = "Dear lord Jesus please work..."
       redirect_to messages_path
     else
       redirect_to :back
