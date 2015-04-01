@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
       flash[:notice] = "Dear lord Jesus please work..."
       redirect_to messages_path
     else
-      redirect_to :back
+      render :new
     end
   end
 
