@@ -3,7 +3,8 @@ require 'rails_helper'
 describe Message, vcr: true do
 
   it { should belong_to :user }
-  
+  it { should belong_to :contact }
+
   it "doesn't save the message if twilio gives an error" do
     message = Message.new(:body => 'hi', :to => '1111111', :from => '5005550006')
     message.save.should be false

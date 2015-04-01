@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :messages
+  has_many :contacts
   validates :phone_number, uniqueness: true
 end
