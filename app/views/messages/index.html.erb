@@ -1,5 +1,6 @@
 <%= link_to "New Text Message", new_message_path %>
+<% if current_user %>
+  <h4>Messages</h4>
 
-<h4>Messages</h4>
-
-<%= render @messages %>
+  <%= render current_user.messages %>
+<% end %>

@@ -10,8 +10,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
+    @message.user_id = current_user.id
     if @message.save
-      flash[:notice] = "Dear lord Jesus please work..."
+      flash[:notice] = "Message successfully sent."
       redirect_to messages_path
     else
       render :new
